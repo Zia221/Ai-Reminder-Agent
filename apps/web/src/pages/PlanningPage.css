@@ -1,0 +1,60 @@
+
+.planning-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.planning-page header {
+  margin-bottom: 28px;
+}
+
+.planning-card {
+  background: var(--card-background, #ffffff);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.planning-card label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+
+.planning-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.planning-card button {
+  padding: 12px 18px;
+  margin: 8px 8px 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.plan-item {
+  border-top: 1px solid #e5e7eb;
+  padding: 16px 0;
+}
+
+.planning-error {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .planning-page {
+    padding: 16px;
+  }
+
+  .planning-card {
+    padding: 16px;
+  }
+}

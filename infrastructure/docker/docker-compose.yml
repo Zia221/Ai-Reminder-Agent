@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: ai-reminder-agent-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ai_reminder_agent
+      POSTGRES_USER: reminder_app
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-replace_me}
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U reminder_app -d ai_reminder_agent"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:

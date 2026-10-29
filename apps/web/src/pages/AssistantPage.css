@@ -1,0 +1,286 @@
+
+.assistant-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+  color: #202039;
+}
+
+.assistant-header,
+.assistant-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.assistant-header {
+  margin-bottom: 28px;
+}
+
+.assistant-header h1 {
+  margin: 6px 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.assistant-header p,
+.assistant-panel-heading p {
+  color: #6e7087;
+}
+
+.assistant-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.assistant-header > a {
+  padding: 10px 14px;
+  border: 1px solid #e0e1eb;
+  border-radius: 10px;
+}
+
+.assistant-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.assistant-side {
+  display: grid;
+  gap: 22px;
+  min-width: 0;
+}
+
+.assistant-panel {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e9e9f2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgb(31 33 65 / 4%);
+}
+
+.assistant-panel h2 {
+  margin-top: 0;
+}
+
+.assistant-panel-heading p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+}
+
+.chat-messages {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 350px;
+  max-height: 580px;
+  margin: 20px 0;
+  overflow-y: auto;
+}
+
+.chat-empty {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  color: #6e7087;
+}
+
+.chat-bubble {
+  max-width: 94%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+
+.chat-bubble p {
+  white-space: pre-wrap;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background: #eeedff;
+}
+
+.chat-bubble.assistant {
+  align-self: flex-start;
+  background: #f5f6fa;
+}
+
+.chat-bubble strong {
+  font-size: 12px;
+}
+
+.chat-input-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.chat-input-row textarea {
+  flex: 1;
+  min-width: 0;
+  resize: vertical;
+}
+
+.assistant-page input,
+.assistant-page textarea,
+.assistant-page select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #dedfeb;
+  border-radius: 10px;
+  background: #fff;
+  color: #202039;
+  font: inherit;
+}
+
+.assistant-page button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 9px;
+  background: #5546d7;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.assistant-page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.assistant-page .secondary-button {
+  flex-shrink: 0;
+  background: #eeedff;
+  color: #4035a7;
+}
+
+.manual-task-form {
+  display: grid;
+  gap: 14px;
+}
+
+.manual-task-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.task-list {
+  display: grid;
+  gap: 12px;
+}
+
+.task-item {
+  display: grid;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px solid #ededf4;
+}
+
+.task-item:last-child {
+  border-bottom: 0;
+}
+
+.task-item h3 {
+  margin: 0 0 6px;
+  overflow-wrap: anywhere;
+}
+
+.task-item p {
+  margin: 0;
+  color: #6e7087;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.task-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.assistant-page .danger-button {
+  background: #fff0f0;
+  color: #a11d2b;
+}
+
+.task-proposal {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid #dcd8ff;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.task-proposal h3 {
+  margin-top: 0;
+}
+
+.assistant-thinking {
+  color: #6e7087;
+}
+
+.assistant-alert {
+  padding: 13px 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+}
+
+.assistant-alert.error {
+  background: #fff0f0;
+  color: #a11d2b;
+}
+
+.assistant-alert.success {
+  background: #eafaf0;
+  color: #176c3b;
+}
+
+@media (max-width: 900px) {
+  .assistant-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .chat-panel {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .assistant-page {
+    padding: 20px 12px 40px;
+  }
+
+  .assistant-header,
+  .assistant-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .assistant-panel {
+    padding: 16px;
+  }
+
+  .chat-input-row {
+    flex-direction: column;
+  }
+
+  .chat-input-row button {
+    width: 100%;
+  }
+}
